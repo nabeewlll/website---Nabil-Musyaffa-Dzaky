@@ -1,0 +1,102 @@
+<title>Billnet</title>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Layanan — NABIL NET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top-nav">
+  <a href="index.html">BERANDA</a>
+  <a href="layanan.html">LAYANAN</a>
+  <a href="produk.html">MENU</a>
+  <a href="pemesanan.html"class="active">PEMESANAN</a>
+  <a href="kontak.html" >PROFIL</a>
+</nav>
+<header class="header order-header">
+    <h1>Pemesanan Layanan</h1>
+   
+</header>
+
+<section class="order-section">
+    <div class="order-card">
+        <form action="#">
+
+            <label for="nama">Nama Lengkap</label>
+            <input id="nama" type="text" placeholder="Masukkan nama lengkap" required>
+
+            <label for="email">Nomer PC/PS</label>
+            <input id="email" type="email" placeholder="Masukkan nomer" required>
+
+            <label for="wa">Nomor WhatsApp</label>
+            <input id="wa" type="tel" placeholder="Contoh: 08123456789" required>
+
+            <label for="layanan">Pilih Layanan</label>
+            <select id="layanan" required>
+                <option value="">-- Pilih layanan --</option>
+                <option>PS 3 SLIM </option>
+                <option>PS 3 PRO </option>
+ <option>PS 4 SLIM </option>
+ <option>PS 4 PRO </option>
+ <option>PS 5 </option>
+                <option>PC REGULER</option>
+ <option>PC PREMIUM</option>
+ <option>PC VVIP</option>
+              
+            </select>
+
+            <label for="tanggal">Tanggal Booking</label>
+            <input id="tanggal" type="date" required>
+
+            <label for="catatan">Catatan Tambahan</label>
+            <textarea id="catatan" placeholder="Tuliskan permintaan khusus (opsional)"></textarea>
+
+            <button type="submit" class="btn-submit">Kirim Pemesanan</button>
+        </form>
+    </div>
+</section>
+
+<a href="index.html" class="back-btn">← Kembali</a>
+    <footer>
+      © <span id="year"></span> Nabil.mdz — Dibuat Bersama GPT.com.
+    </footer>
+
+<script>
+// ==========================
+// Fade-in saat muncul di layar
+// ==========================
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+// ==========================
+// Ripple Button Effect
+// ==========================
+document.querySelectorAll(".btn-submit").forEach(button => {
+    button.addEventListener("click", function(e) {
+        const circle = document.createElement("span");
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - button.offsetLeft - radius}px`;
+        circle.style.top = `${e.clientY - button.offsetTop - radius}px`;
+        circle.classList.add("ripple");
+
+        const ripple = button.getElementsByClassName("ripple")[0];
+        if (ripple) ripple.remove();
+
+        button.appendChild(circle);
+    });
+});
+</script>
+
+</body>
+</html>
+

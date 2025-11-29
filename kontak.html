@@ -1,0 +1,96 @@
+<title>Billnet</title><!-- NAVIGASI KANAN ATAS -->
+<nav class="top-nav">
+  <a href="index.html">BERANDA</a>
+  <a href="layanan.html">LAYANAN</a>
+  <a href="produk.html">PRODUK</a>
+  <a href="pemesanan.html">PEMESANAN</a>
+  <a href="kontak.html" class="active">PROFIL</a>
+</nav>
+<body>
+<section class="contact-page card">
+
+  <h2 class="title">Tentang Pemilik</h2>
+  <link rel="stylesheet" href="style.css">
+
+  <div class="owner-bio">
+
+    <div class="bio-image">
+      <img src="nabil.jpg" alt="Foto Pemilik">
+    </div>
+
+    <div class="bio-text">
+
+      <div class="highlight-box">
+        <h3 class="owner-name">Nabil Musyaffa Dzaky</h3>
+        <p class="owner-role"> Owner Billnet</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="bio-paragraph">
+        Nabil Musyaffa Dzaky adalah pemilik sekaligus pengelola Billnet, sebuah warnet modern yang dirancang untuk memenuhi kebutuhan gaming, pekerjaan digital, dan layanan internet cepat bagi masyarakat sekitar. Dengan minat besar pada teknologi sejak kecil, Saya mulai membangun Billnet sebagai tempat yang nyaman, aman, dan terjangkau bagi pelajar, mahasiswa, hingga pekerja.
+      </p>
+
+      <p class="bio-paragraph">
+        Saya merupakan siswa <strong>SMAIT YAPIDH</strong>, 
+        Kelas <strong>XII SAINTEK B</strong>
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="contact-info">
+        <p>📩 Email: <strong>billnet@gmail.com</strong></p>
+        <p>📱 WhatsApp: <strong>0812-3456-7890</strong></p>
+        <p>📷 Instagram: <strong>@nabil.mdz</strong></p>
+        <p><strong>PEMBUATAN WEBSITE DISERTAI BANTUAN chatgpt.com</strong></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="back-button-container">
+    <a href="index.html" class="back-button">← Kembali ke Halaman Utama</a>
+  </div>
+
+</section>
+  <footer>
+      © <span id="year"></span> Nabil.mdz — Dibuat Bersama GPT.com.
+    </footer>
+
+<script>
+// ==========================
+// Fade-in Observer
+// ==========================
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-in, .bio-image").forEach(el => observer.observe(el));
+
+
+// ==========================
+// Ripple effect button
+// ==========================
+document.querySelectorAll(".ripple-btn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
+    const circle = document.createElement("span");
+    const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+    const radius = diameter / 2;
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${e.clientX - btn.offsetLeft - radius}px`;
+    circle.style.top = `${e.clientY - btn.offsetTop - radius}px`;
+
+    this.appendChild(circle);
+
+    setTimeout(() => circle.remove(), 600);
+  });
+});
+</script>
+
+
+</body>

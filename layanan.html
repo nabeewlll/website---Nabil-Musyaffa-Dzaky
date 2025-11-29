@@ -1,0 +1,89 @@
+<title>Billnet</title>
+<section id="services" class="services card">
+<link rel="stylesheet" href="style.css">
+  <h2>Kami menyediakan layanan</h2>
+  <div class="site">
+    <header>
+    <div class="brand-title">Billnet</div>
+  </a>
+    <nav class="top-nav">
+    <a href="index.html">BERANDA</a>
+    <a href="layanan.html"class="active">LAYANAN</a>
+    <a href="produk.html">MENU</a>
+    <a href="pemesanan.html">PEMESANAN</a>
+    <a href="kontak.html" >PROFIL</a>
+    </nav>
+</header>
+<body>
+<div class="services-grid">
+    <div class="service-card">
+      <div class="icon">🎮</div>
+      <h3>PLAYSTATION</h3>
+      <p>
+    <ul>
+      <li>PS 3 SLIM — Rp 5.000 / jam</li>
+      <li>PS 3 PRO — Rp 6.000 / jam</li>
+      <li>PS 4 SLIM — Rp 8.000 / jam</li>
+      <li>PS 4 PRO — Rp 9.000 / jam</li>
+      <li>PS 5 — Rp 12.000 / jam</li>
+    </ul>.</p>
+    </div>
+<div class="service-card">
+      <div class="icon">🖥</div>
+      <h3>PC REGULER</h3>
+      <p><ul>
+<li>PC standar mumpuni untuk game cukup berat dan ruangan ber AC.</li>
+<li>REGULER — Rp 4.000 / jam</li> </p>
+    </div>
+<div class="service-card">
+      <div class="icon">🖥</div>
+      <h3>PC PREMIUM</h3>
+      <p><ul>
+<li>PC mumpuni untuk game berat, ruangan ber AC, dan kursi Gaming.</li>
+<li>PREMIUM — Rp 6.000 / jam</li> </p>
+    </div>
+<div class="service-card">
+      <div class="icon">🖥</div>
+      <h3>PC VVIP</h3>
+      <p><ul>
+<li>PC sangat mumpuni untuk game sangat berat, ruangan privat ber AC, dan kursi gaming lebar .</li>
+<li>VVIP — Rp 10.000 / jam</li> </p>
+    </div>
+
+
+    <a href="index.html" class="back-home">← Kembali ke Halaman Utama</a>
+</section>
+  <footer>
+      © <span id="year"></span> Nabil.mdz — Dibuat Bersama GPT.com.
+    </footer>
+
+<script>
+// Animasi elemen layanan ketika muncul di layar
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+// Observe semua service-card
+document.querySelectorAll(".service-card").forEach(card => {
+  card.classList.add("fade-in-up");
+  observer.observe(card);
+});
+
+// Observe judul
+const title = document.querySelector("h2");
+title.classList.add("fade-in-up");
+observer.observe(title);
+
+// Tombol kembali (animasi muncul)
+const backBtn = document.querySelector(".back-home");
+backBtn.classList.add("fade-in-up");
+observer.observe(backBtn);
+</script>
+
+</body>
+
+

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MENU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="site">
+
+    <header>
+      <a href="kontak.html" class="brand">
+        <div class="logo">NF</div>
+        <div>
+          <div class="brand-title">MENU</div>
+          <div class="brand-sub"> HAUS DAN LAPER ? PESEN MAKAN AJAAAA.. </div>
+        </div>
+      </a>
+     <nav class="top-nav">
+  <a href="index.html">BERANDA</a>
+  <a href="layanan.html">LAYANAN</a>
+  <a href="produk.html"class="active">MENU</a>
+  <a href="pemesanan.html">PEMESANAN</a>
+  <a href="kontak.html" >PROFIL</a>
+</nav>
+
+    </header>
+ <section id="menu" class="services">
+
+ 
+
+  <div class="service card">
+    <h3>Makanan </h3>
+    <ul>
+      <li>Indomie Goreng — Rp 8.000</li>
+      <li>Indomie Kuah — Rp 8.000</li>
+      <li>Mie Telor Rebus — Rp 7.000</li>
+      <li>Nasi Goreng — Rp 12.000</li>
+      <li>Nugget + Kentang — Rp 10.000</li>
+      <li>Roti Bakar — Rp 10.000</li>
+      <li>Sosis Bakar — Rp 8.000</li>
+    </ul>
+  </div>
+ <div class="service card">
+    <h3> Minuman</h3>
+    <ul>
+      <li>Es Teh Manis — Rp 5.000</li>
+      <li>Teh Hangat — Rp 4.000</li>
+      <li>Kopi Hitam — Rp 6.000</li>
+      <li>Kopi Susu — Rp 7.000</li>
+      <li>Es Jeruk — Rp 6.000</li>
+      <li>Good Day — Rp 7.000</li>
+      <li>Nutrisari — Rp 6.000</li>
+    </ul>
+  </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Nabil.mdz — Dibuat Bersama GPT.com.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+// Observer untuk animasi fade + slide
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+// Animasi judul
+const title = document.querySelector(".portfolio-page h2");
+title.classList.add("fade-in-up");
+observer.observe(title);
+
+// Animasi semua foto portfolio
+document.querySelectorAll(".photo").forEach(photo => {
+  photo.classList.add("fade-in-up");
+  observer.observe(photo);
+});
+</script>
+
+</body>
+</html>
+

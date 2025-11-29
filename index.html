@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Billnet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="site">
+    <header>
+    <div class="brand-title"><h1>Billnet</h1></div>
+  </a>
+
+ <nav class="top-nav">
+  <a href="index.html"class="active">BERANDA</a>
+  <a href="layanan.html">LAYANAN</a>
+  <a href="produk.html">MENU</a>
+  <a href="pemesanan.html">PEMESANAN</a>
+  <a href="kontak.html" >PROFIL</a>
+</nav>
+
+</header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">
+        </div>
+        <h1>Billnet — Tempat Nyaman Untuk Gaming & Internet.</h1>
+        <p class="lead">Slogan kami: <b>"Cepat, Nyaman, Hemat."</b><br>
+          Nikmati koneksi cepat, ruangan nyaman, dan fasilitas lengkap..</p>
+<h3>Poin Plus Billnet:</h3>
+        <ul>
+          <li>✔ Koneksi stabil 24 jam</li>
+          <li>✔ AC full room</li>
+          <li>✔ PC dan Console performa tinggi</li>
+          <li>✔ Harga terjangkau</li>
+          <li>✔ Banyak pilihan makanan & minuman</li>
+        </ul><br><br>
+
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="location.href='pemesanan.html'">Book Sekarang</button>
+          <button class="btn btn-ghost" onclick="location.href='produk.html'">Lihat Menu</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="logo.jpg" alt="logo">
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="service card">
+        <h3>WARNET</h3>
+        <p>Menyediakan pelayanan komputer yang  mumpuni untuk gaming dan desain, tersedia paket Reguler, Premium, dan VVIP</p>
+      </div>
+      <div class="service card">
+        <h3>PLAYSTATION</h3>
+        <p>Menyediakan pelayanan PLAYSTATION mulai dari PS 3 SLIM dan PRO, PS 4 SLIM dan PRO, dan juga PS 5.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Nabil.mdz — Dibuat Bersama GPT.com.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+// ============================
+// NAVBAR SHRINK SAAT SCROLL
+// ============================
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+      header.classList.add("shrink");
+  } else {
+      header.classList.remove("shrink");
+  }
+});
+
+// ============================
+// FADE-IN ELEMENT SAAT MUNCUL
+// ============================
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+      }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+// ============================
+// ANIMASI HERO MASUK
+// ============================
+window.addEventListener("load", () => {
+  document.querySelector(".hero-left").classList.add("hero-appear");
+  document.querySelector(".hero-right img").classList.add("image-appear");
+});
+</script>
+
+</body>
+</html>
+
+
